@@ -149,9 +149,9 @@ export async function validateImage({ file, img }) {
     push({
       id: 'resolution',
       label: 'Resolution',
-      status: 'failed',
-      message: `Image is ${w}×${h}px. A minimum of ${minW}×${minH}px is recommended for a sharp result.`,
-      action: 'Upload a higher-resolution photograph.',
+      status: 'warning',
+      message: `Image is ${w}×${h}px, below the recommended ${minW}×${minH}px. It can still be cropped, but the exported photo may look soft or pixelated.`,
+      action: 'For best quality, use the original camera photo at its highest resolution.',
     });
   } else {
     push({

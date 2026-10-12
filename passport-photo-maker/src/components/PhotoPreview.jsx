@@ -22,6 +22,10 @@ export default function PhotoPreview({
         src={imageUrl}
         alt="The photograph you just uploaded"
       />
+      <p className="muted">
+        Transparent areas use a white background. Existing backgrounds in the
+        photo are not removed.
+      </p>
 
       <div className="meta-grid">
         <div className="meta-item">

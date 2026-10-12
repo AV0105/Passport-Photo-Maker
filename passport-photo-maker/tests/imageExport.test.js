@@ -53,6 +53,17 @@ describe('canvas export', () => {
     expect(url.startsWith('data:image/png')).toBe(true);
   });
 
+  it('composites transparent image areas onto white', () => {
+    const src = createCanvas(100, 100);
+    const ctx = src.getContext('2d');
+    ctx.fillStyle = '#ff0000';
+    ctx.fillRect(25, 25, 50, 50);
+
+    const out = renderCropToCanvas(src, { x: 0, y: 0, width: 100, height: 100 }, 100, 100);
+    const pixel = out.getContext('2d').getImageData(0, 0, 1, 1).data;
+    expect(Array.from(pixel)).toEqual([255, 255, 255, 255]);
+  });
+
   it('exportCrop returns configured dimensions', async () => {
     const src = await makeSourceImage();
     const res = await exportCrop({
