@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react';
 import { Lightbulb, AlertTriangle, Info } from 'lucide-react';
 import { guides, guideIndex } from '../data/guideContent.js';
-import { SiteHeader, SiteFooter } from './siteChrome.jsx';
+import { SiteHeader, SiteFooter } from './SiteChrome.jsx';
 import './GuidePage.css';
 
 function estimateReadingTime(blocks) {

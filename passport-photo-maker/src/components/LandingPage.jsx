@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './LandingPage.css';
-import { SiteHeader, SiteFooter } from './siteChrome.jsx';
+import { SiteHeader, SiteFooter } from './SiteChrome.jsx';
 import {
   Scissors, Wand2, Ruler, Lock, Globe, ArrowRight,
   Home, Smartphone, Settings2, Camera, Check, Target, Handshake,
